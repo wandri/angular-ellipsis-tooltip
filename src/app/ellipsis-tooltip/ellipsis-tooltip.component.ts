@@ -1,4 +1,4 @@
-import {Component, ElementRef, Input, OnChanges, SimpleChanges} from '@angular/core';
+import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 
 @Component({
   selector: 'app-ellipsis-tooltip',
@@ -7,11 +7,9 @@ import {Component, ElementRef, Input, OnChanges, SimpleChanges} from '@angular/c
 })
 export class EllipsisTooltipComponent implements OnChanges {
   @Input() content = '';
-  domElement: any;
   text = '';
 
-  constructor(private elementRef: ElementRef) {
-    this.domElement = this.elementRef.nativeElement;
+  constructor() {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -20,6 +18,4 @@ export class EllipsisTooltipComponent implements OnChanges {
       this.text = change.currentValue;
     }
   }
-
-
 }
