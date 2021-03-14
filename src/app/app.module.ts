@@ -3,20 +3,16 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {EllipsisTooltipDirective} from './ellipsis-tooltip.directive';
-import {EllipsisTooltipComponent} from './ellipsis-tooltip/ellipsis-tooltip.component';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import {EllipsisTooltipModule} from './ellipsis-tooltip/ellipsis-tooltip.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EllipsisTooltipDirective,
-    EllipsisTooltipComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatTooltipModule,
+    EllipsisTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
