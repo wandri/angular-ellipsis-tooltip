@@ -1,10 +1,10 @@
-import {AfterViewInit, Directive, ElementRef, HostListener} from '@angular/core';
+import {AfterViewInit, Directive, ElementRef, HostListener, OnChanges, SimpleChanges} from '@angular/core';
 import {MatTooltip} from '@angular/material/tooltip';
 
 @Directive({
   selector: '[matTooltip][appEllipsisTooltip]'
 })
-export class EllipsisTooltipDirective implements AfterViewInit {
+export class EllipsisTooltipDirective implements AfterViewInit, OnChanges {
 
   constructor(private matTooltip: MatTooltip,
               private elementRef: ElementRef<HTMLElement>) {
@@ -13,6 +13,11 @@ export class EllipsisTooltipDirective implements AfterViewInit {
   public ngAfterViewInit(): void {
     this.setToolTip();
   }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes);
+  }
+
 
   @HostListener('window:resize', ['$event.target'])
   setToolTip(): void {

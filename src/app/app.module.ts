@@ -4,6 +4,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {EllipsisTooltipModule} from './ellipsis-tooltip/ellipsis-tooltip.module';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import {EllipsisTooltipModule} from './ellipsis-tooltip/ellipsis-tooltip.module'
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    EllipsisTooltipModule
+    EllipsisTooltipModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
