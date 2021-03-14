@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { EllipsisTooltipComponent } from './ellipsis-tooltip.component';
+import {EllipsisTooltipComponent} from './ellipsis-tooltip.component';
 
 describe('EllipsisTooltipComponent', () => {
   let component: EllipsisTooltipComponent;
@@ -8,9 +8,9 @@ describe('EllipsisTooltipComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EllipsisTooltipComponent ]
+      declarations: [EllipsisTooltipComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

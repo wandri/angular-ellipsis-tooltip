@@ -1,4 +1,4 @@
-import { EllipsisTooltipDirective } from './ellipsis-tooltip.directive';
+import {EllipsisTooltipDirective} from './ellipsis-tooltip.directive';
 
 describe('EllipsisTooltipDirective', () => {
   it('should create an instance', () => {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-ellipsis-tooltip',
@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EllipsisTooltipComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
