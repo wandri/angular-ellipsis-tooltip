@@ -2,6 +2,22 @@
   "name": "ellipsis-tooltip",
   "version": "0.0.0",
   "author": "Wandrille Guesdon",
+  "description": "Angular component which add dynamically ellipsis and material tooltip when the text is too long",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wandri/angular-ellipsis-tooltip.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wandri/angular-ellipsis-tooltip/issues"
+  },
+  "homepage": "https://github.com/wandri/angular-ellipsis-tooltip",
+  "keywords": [
+    "angular",
+    "angular-material",
+    "tooltip",
+    "ellipsis"
+  ],
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
