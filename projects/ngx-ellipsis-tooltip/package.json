@@ -1,6 +1,6 @@
 {
   "name": "ngx-ellipsis-tooltip",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "author": "Wandrille Guesdon",
   "description": "Angular component which add dynamically ellipsis and material tooltip when the text is too long",
   "repository": {

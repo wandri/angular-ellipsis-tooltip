@@ -14,12 +14,12 @@ Add the module
   ],
   imports: [
     ...,
-    EllipsisTooltipModule,
+    NgxEllipsisTooltipModule,
   ],
 })
 ```
 
-## `<app-ellipsis-tooltip></app-ellipsis-tooltip>`
+## `<ngx-ellipsis-tooltip></ngx-ellipsis-tooltip>`
 
 | @ Input  | Description  | Type  | Requested  |
 | :------------ | :------------ | :------------ | :------------ |
