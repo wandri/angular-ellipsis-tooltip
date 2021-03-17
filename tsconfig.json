@@ -11,6 +11,12 @@
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
+    "paths": {
+      "ngx-ellipsis-tooltip": [
+        "dist/ngx-ellipsis-tooltip/ngx-ellipsis-tooltip",
+        "dist/ngx-ellipsis-tooltip"
+      ]
+    },
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,

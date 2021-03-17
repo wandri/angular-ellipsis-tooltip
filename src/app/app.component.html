@@ -1,4 +1,6 @@
-<input [(ngModel)]="text">
+<label>
+  <input [(ngModel)]="text">
+</label>
 <div class="size-100">
-  <app-ellipsis-tooltip [content]="text"></app-ellipsis-tooltip>
+  <ngx-ellipsis-tooltip [content]="text"></ngx-ellipsis-tooltip>
 </div>

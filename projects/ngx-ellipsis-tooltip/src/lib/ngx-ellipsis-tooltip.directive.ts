@@ -1,10 +1,10 @@
-import {AfterViewInit, Directive, ElementRef, HostListener, Input, OnChanges, SimpleChanges} from '@angular/core';
-import {MatTooltip} from '@angular/material/tooltip';
+import { AfterViewInit, Directive, ElementRef, HostListener, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { MatTooltip } from '@angular/material/tooltip';
 
 @Directive({
-  selector: '[matTooltip][appEllipsisTooltip]'
+  selector: '[matTooltip][ngxEllipsisTooltip]'
 })
-export class EllipsisTooltipDirective implements AfterViewInit, OnChanges {
+export class NgxEllipsisTooltipDirective implements AfterViewInit, OnChanges {
 
   @Input() content = '';
 
