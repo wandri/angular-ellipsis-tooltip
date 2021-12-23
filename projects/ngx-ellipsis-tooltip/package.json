@@ -1,6 +1,6 @@
 {
   "name": "ngx-ellipsis-tooltip",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "author": "Wandrille Guesdon",
   "peerDependencies": {
     "@angular/common": "^11.2.5",
