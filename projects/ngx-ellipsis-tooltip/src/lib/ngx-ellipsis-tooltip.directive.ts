@@ -1,10 +1,17 @@
-import { AfterViewInit, Directive, ElementRef, HostListener, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { MatTooltip } from '@angular/material/tooltip';
+import {AfterViewInit, Directive, ElementRef, HostListener, Input, OnChanges, SimpleChanges} from '@angular/core';
+import {MatTooltip} from '@angular/material/tooltip';
 
 @Directive({
-  selector: '[matTooltip][ngxEllipsisTooltip]'
+  selector: '[matTooltip][appEllipsisTooltip]',
+  host: {
+    '[style.width]': '"100%"',
+    '[style.height]': '"100%"',
+    '[style.white-space]': '"nowrap"',
+    '[style.overflow]': '"hidden"',
+    '[style.text-overflow]': '"ellipsis"',
+  }
 })
-export class NgxEllipsisTooltipDirective implements AfterViewInit, OnChanges {
+export class EllipsisTooltipDirective implements AfterViewInit, OnChanges {
 
   @Input() content = '';
 
@@ -25,6 +32,7 @@ export class NgxEllipsisTooltipDirective implements AfterViewInit, OnChanges {
 
   @HostListener('window:resize', ['$event.target'])
   setToolTip(): void {
+    console.log(this.elementRef.nativeElement)
     this.matTooltip.disabled = this.elementRef.nativeElement.offsetWidth >= this.elementRef.nativeElement.scrollWidth;
   }
 }
