@@ -1,7 +1,8 @@
 <h1>Angular dynamic ellipsis</h1>
 <p>For responsive applications, the use of ellipsis for long content can be necessary. When we want to go further and
   display the Angular material tooltip when the ellipsis are displayed.</p>
-<input [(ngModel)]="text" placeholder="Write your text here to play with the dynamic ellipsis">
+<input (focus)="clearAutoText()" [(ngModel)]="text"
+       placeholder="Write your text here to play with the dynamic ellipsis">
 <mat-slider
   (change)="changeWidth($event)"
   (input)="removeEllipsis()"
