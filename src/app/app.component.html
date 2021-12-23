@@ -1,6 +1,17 @@
-<label>
-  <input [(ngModel)]="text">
-</label>
-<div class="size-100">
-  <ngx-ellipsis-tooltip [content]="text"></ngx-ellipsis-tooltip>
+<h1>Angular dynamic ellipsis</h1>
+<p>For responsive applications, the use of ellipsis for long content can be necessary. When we want to go further and
+  display the Angular material tooltip when the ellipsis are displayed.</p>
+<input [(ngModel)]="text" placeholder="Write your text here to play with the dynamic ellipsis">
+<mat-slider
+  [value]="200"
+  (change)="changeWidth($event)"
+  tickInterval="1"
+  step="1"
+  min="0"
+  max="500"
+></mat-slider>
+<div class="ellipsis-static-container">
+  <div class="ellipsis-dynamic-container"[style.width.px]="width" >
+  <app-ellipsis-tooltip [style.width.px]="width" [content]="text"></app-ellipsis-tooltip>
+  </div>
 </div>
