@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {MatSliderChange} from "@angular/material/slider";
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  text = '';
+  text = 'this is a long story about ellipsis, angular and material tooltip';
   title = 'ellipsis-tooltip';
+  width: number | null = 300;
+
+  changeWidth(event: MatSliderChange) {
+    this.width = event.value
+  }
 }
