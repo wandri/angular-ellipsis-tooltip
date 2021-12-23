@@ -10,8 +10,14 @@ export class AppComponent {
   text = 'this is a long story about ellipsis, angular and material tooltip';
   title = 'ellipsis-tooltip';
   width: number | null = 300;
+  displayEllipsis = true;
 
   changeWidth(event: MatSliderChange) {
-    this.width = event.value
+    this.width = event.value;
+    this.displayEllipsis = true;
+  }
+
+  removeEllipsis() {
+    this.displayEllipsis = false;
   }
 }
