@@ -22,7 +22,7 @@ display
 the **[Angular material tooltip](https://material.angular.io/components/tooltip/overview "Angular material tooltip")**
 when the ellipsis are displayed.
 
-![demo tooltip](https://github.com/wandri/angular-ellipsis-tooltip/assets/demo_ellipsis.gif)
+![demo tooltip](https://github.com/wandri/angular-ellipsis-tooltip/blob/master/assets/demo_ellipsis.gif)
 
 Add the module
 
