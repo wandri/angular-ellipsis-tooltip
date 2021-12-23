@@ -32,7 +32,6 @@ export class NgxEllipsisTooltipDirective implements AfterViewInit, OnChanges {
 
   @HostListener('window:resize', ['$event.target'])
   setToolTip(): void {
-    console.log(this.elementRef.nativeElement)
     this.matTooltip.disabled = this.elementRef.nativeElement.offsetWidth >= this.elementRef.nativeElement.scrollWidth;
   }
 }
