@@ -6,6 +6,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 import {NgxEllipsisTooltipModule} from 'ngx-ellipsis-tooltip';
 import {MatSliderModule} from "@angular/material/slider";
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import {MatSliderModule} from "@angular/material/slider";
     NgxEllipsisTooltipModule,
     FormsModule,
     MatSliderModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
