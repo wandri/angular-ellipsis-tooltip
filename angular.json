@@ -169,5 +169,7 @@
       }
     }
   },
-  "defaultProject": "ellipsis-tooltip"
+  "cli": {
+    "analytics": false
+  }
 }

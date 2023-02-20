@@ -1,5 +1,4 @@
 import {AfterViewInit, Component} from '@angular/core';
-import {MatSliderChange} from "@angular/material/slider";
 
 @Component({
   selector: 'app-root',
@@ -36,8 +35,8 @@ export class AppComponent implements AfterViewInit {
     }, 100 * (1 + Math.random()))
   }
 
-  changeWidth(event: MatSliderChange) {
-    this.width = event.value;
+  changeWidth(event: number) {
+    this.width = event;
     this.displayEllipsis = true;
   }
 
@@ -49,6 +48,5 @@ export class AppComponent implements AfterViewInit {
     if (this.autoText) {
       clearInterval(this.autoText);
     }
-    clearInterval();
   }
 }

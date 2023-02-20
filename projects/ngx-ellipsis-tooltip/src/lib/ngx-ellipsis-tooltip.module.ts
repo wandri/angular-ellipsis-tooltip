@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { NgxEllipsisTooltipDirective } from './ngx-ellipsis-tooltip.directive';
 import { CommonModule } from '@angular/common';
-import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatLegacyTooltipModule as MatTooltipModule } from '@angular/material/legacy-tooltip';
 import { NgxEllipsisTooltipComponent } from './ngx-ellipsis-tooltip.component';
 
 
