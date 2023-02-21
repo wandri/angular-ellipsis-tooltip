@@ -34,6 +34,8 @@ export class NgxEllipsisTooltipComponent implements OnChanges{
           this.contentRight = newValue;
         }
       }else{
+        this.contentLeft='';
+        this.contentRight = newValue;
       }
     }
   }
