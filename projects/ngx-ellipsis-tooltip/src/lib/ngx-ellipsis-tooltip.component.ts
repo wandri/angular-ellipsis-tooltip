@@ -32,7 +32,7 @@ export class NgxEllipsisTooltipComponent implements OnInit, OnChanges {
     if (value.length > 0) {
       const indexes = [...value.matchAll(/[_ ,.\{\[\(]+/g)]
       if (indexes.length > 0) {
-        const lastIndex = indexes[indexes.length - 1].index;
+        const lastIndex = Math.max(indexes[indexes.length - 1].index, value.length - 6);
         this.contentLeft = value.substring(0, lastIndex);
         this.contentRight = value.substring(lastIndex, value.length);
       } else {
