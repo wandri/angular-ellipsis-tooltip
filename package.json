@@ -8,6 +8,7 @@
     "build": "ng build",
     "start-lib": "ng build ngx-ellipsis-tooltip --watch",
     "test": "ng test",
+    "test-lib": "ng test ngx-ellipsis-tooltip",
     "lint": "ng lint"
   },
   "private": true,
