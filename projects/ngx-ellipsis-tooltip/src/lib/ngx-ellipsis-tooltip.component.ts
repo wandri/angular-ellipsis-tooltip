@@ -24,7 +24,7 @@ export class NgxEllipsisTooltipComponent implements OnChanges{
     if (change.currentValue !== change.previousValue) {
       const newValue = change.currentValue;
       if(newValue.length>0){
-        const indexes = [...newValue.matchAll(/[_ ,.\(\)]+/g)]
+        const indexes = [...newValue.matchAll(/[_ ,.\{\[\(]+/g)]
         if(indexes.length>0){
           const lastIndex = indexes[indexes.length - 1].index;
           this.contentLeft = newValue.substring(0, lastIndex);
