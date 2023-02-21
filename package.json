@@ -6,6 +6,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "start-lib": "ng build ngx-ellipsis-tooltip --watch",
     "test": "ng test",
     "lint": "ng lint"
   },
