@@ -1,2 +1,14 @@
 :host {
+  .part-ellipsis {
+    flex: 0 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre;
+  }
+
+  .part-without-ellipsis {
+    flex: 1 0 auto;
+    overflow: hidden;
+    white-space: pre;
+  }
 }

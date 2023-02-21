@@ -1,4 +1,4 @@
-import {AfterViewInit, Directive, ElementRef, HostListener, Input, OnChanges, SimpleChanges} from '@angular/core';
+import {AfterViewInit, Directive, ElementRef, HostListener, OnChanges, SimpleChanges} from '@angular/core';
 import {MatTooltip} from "@angular/material/tooltip";
 
 @Directive({
@@ -7,13 +7,10 @@ import {MatTooltip} from "@angular/material/tooltip";
     '[style.width]': '"100%"',
     '[style.height]': '"100%"',
     '[style.white-space]': '"nowrap"',
-    '[style.overflow]': '"hidden"',
-    '[style.text-overflow]': '"ellipsis"',
+    '[style.display]': '"flex"'
   }
 })
 export class NgxEllipsisTooltipDirective implements AfterViewInit, OnChanges {
-
-  @Input() content = '';
 
   constructor(private matTooltip: MatTooltip,
               private elementRef: ElementRef<HTMLElement>) {
