@@ -1,16 +1,16 @@
-import {ChangeDetectionStrategy, Component, Input, SimpleChanges} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 
 @Component({
   selector: 'ngx-ellipsis-tooltip',
   template: `
-    <div [matTooltip]="content" ngxEllipsisTooltip>
+    <div [matTooltip]="content" [content]="content" ngxEllipsisTooltip>
       <span class="part-ellipsis">{{contentLeft}}</span>
       <span class="part-without-ellipsis">{{contentRight}}</span>
     </div>`,
   styleUrls: ['./ngx-ellipsis-tooltip.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NgxEllipsisTooltipComponent {
+export class NgxEllipsisTooltipComponent implements OnChanges{
   @Input() content = '';
 
   contentLeft: string = '';
@@ -23,10 +23,18 @@ export class NgxEllipsisTooltipComponent {
     const change = changes.content;
     if (change.currentValue !== change.previousValue) {
       const newValue = change.currentValue;
-      const indexes = [...newValue.matchAll(/[_ ,.\(\d\)]+/g)]
-      const lastIndex = indexes[indexes.length - 1].index;
-      this.contentLeft = newValue.substring(0, lastIndex - 1);
-      this.contentRight = newValue.substring(lastIndex, newValue.length);
+      if(newValue.length>0){
+        const indexes = [...newValue.matchAll(/[_ ,.\(\d\)]+/g)]
+        if(indexes.length>0){
+          const lastIndex = indexes[indexes.length - 1].index;
+          this.contentLeft = newValue.substring(0, lastIndex - 1);
+          this.contentRight = newValue.substring(lastIndex, newValue.length);
+        }else{
+          this.contentLeft='';
+          this.contentRight = newValue;
+        }
+      }else{
+      }
     }
   }
 }
