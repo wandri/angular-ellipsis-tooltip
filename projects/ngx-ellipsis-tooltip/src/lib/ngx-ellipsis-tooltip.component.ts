@@ -23,8 +23,7 @@ export class NgxEllipsisTooltipComponent {
     const change = changes.content;
     if (change.currentValue !== change.previousValue) {
       const newValue = change.currentValue;
-      const regex = new RegExp(/[_ ,.\(\d\)]+/, 'g');
-      const indexes = [...newValue.matchAll(regex)]
+      const indexes = [...newValue.matchAll(/[_ ,.\(\d\)]+/g)]
       const lastIndex = indexes[indexes.length - 1].index;
       this.contentLeft = newValue.substring(0, lastIndex - 1);
       this.contentRight = newValue.substring(lastIndex, newValue.length);
