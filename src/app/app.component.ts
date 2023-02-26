@@ -17,7 +17,6 @@ export class AppComponent implements AfterViewInit {
     let index = 'this is a long story'.length - 1;
     let direction = 1;
     this.autoText = setInterval(() => {
-      console.log("é")
       if (direction == 1 && index != example.length - 1) {
         index++;
         this.text += example[index]

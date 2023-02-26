@@ -12,6 +12,9 @@
 </mat-slider>
 <div class="ellipsis-static-container">
   <div *ngIf="displayEllipsis" [style.width.px]="width" class="ellipsis-dynamic-container">
-    <ngx-ellipsis-tooltip [content]="text" [style.width.px]="width"></ngx-ellipsis-tooltip>
+    <ngx-ellipsis-tooltip [style.width.px]="width" [text]="text"></ngx-ellipsis-tooltip>
+  </div>
+  <div *ngIf="displayEllipsis" [style.width.px]="width" class="ellipsis-dynamic-container">
+    <ngx-ellipsis-tooltip [smartCut]="false" [style.width.px]="width" [text]="text"></ngx-ellipsis-tooltip>
   </div>
 </div>

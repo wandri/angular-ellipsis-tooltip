@@ -22,8 +22,8 @@ export class NgxEllipsisTooltipComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    const change = changes.content;
-    if (change.currentValue !== change.previousValue) {
+    const change = changes.text;
+    if (change && change.currentValue !== change.previousValue) {
       const newValue = change.currentValue;
       this.updateText(newValue);
     }
@@ -39,7 +39,7 @@ export class NgxEllipsisTooltipComponent implements OnInit, OnChanges {
         return;
       }
     }
-    this.contentLeft = '';
-    this.contentRight = value;
+    this.contentLeft = value;
+    this.contentRight = "";
   }
 }
