@@ -40,6 +40,7 @@ Add the module
 
 ## `<app-ellipsis-tooltip></app-ellipsis-tooltip>`
 
-| @ Input  | Description  | Type  | Requested  |
-| :------------ | :------------ | :------------ | :------------ |
-| content  | text to display  | string  | True  |
+| @ Input  | Description                                          | Type    | Requested              |
+|:---------|:-----------------------------------------------------|:--------|:-----------------------|
+| text     | text to display                                      | string  | True                   |
+| smartCut | move the ellipsis inside the text and not at the end | boolean | False (default = true) |

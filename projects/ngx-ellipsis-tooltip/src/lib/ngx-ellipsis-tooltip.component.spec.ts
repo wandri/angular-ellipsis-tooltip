@@ -1,6 +1,9 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { NgxEllipsisTooltipComponent } from './ngx-ellipsis-tooltip.component';
+import {NgxEllipsisTooltipComponent} from './ngx-ellipsis-tooltip.component';
+import {NgxEllipsisTooltipDirective} from "./ngx-ellipsis-tooltip.directive";
+import {MatTooltipModule} from "@angular/material/tooltip";
+import {SimpleChange} from "@angular/core";
 
 describe('NgxEllipsisTooltipComponent', () => {
   let component: NgxEllipsisTooltipComponent;
@@ -8,7 +11,8 @@ describe('NgxEllipsisTooltipComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NgxEllipsisTooltipComponent]
+      declarations: [NgxEllipsisTooltipComponent, NgxEllipsisTooltipDirective],
+      imports: [MatTooltipModule]
     })
       .compileComponents();
   });
@@ -21,5 +25,12 @@ describe('NgxEllipsisTooltipComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should display name with ellipsis', () => {
+    component.ngOnChanges({content: new SimpleChange('', "Long name that should be reduced after some time but let's wait", false)})
+    fixture.detectChanges();
+    expect(component.contentLeft).toEqual("Long name that should be reduced after some time but let's");
+    expect(component.contentRight).toEqual(" wait");
   });
 });
