@@ -27,10 +27,9 @@ describe('NgxEllipsisTooltipComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  fit('should display name with ellipsis', () => {
+  it('should display name with ellipsis', () => {
     component.ngOnChanges({content: new SimpleChange('', "Long name that should be reduced after some time but let's wait", false)})
     fixture.detectChanges();
-    const elements = fixture.nativeElement.querySelectorAll("span");
     expect(component.contentLeft).toEqual("Long name that should be reduced after some time but let's");
     expect(component.contentRight).toEqual(" wait");
   });

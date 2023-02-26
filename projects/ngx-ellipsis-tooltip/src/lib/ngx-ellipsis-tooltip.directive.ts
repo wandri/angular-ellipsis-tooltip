@@ -25,14 +25,14 @@ export class NgxEllipsisTooltipDirective implements AfterViewInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     const change = changes.content;
-    if (change.currentValue !== change.previousValue) {
+    if (change && change.currentValue !== change.previousValue) {
       this.setToolTip();
     }
   }
 
   @HostListener('window:resize', ['$event.target'])
   setToolTip(): void {
-    const children:HTMLCollection = this.elementRef.nativeElement.children;
-    this.matTooltip.disabled = children.item(0)!.clientWidth+children.item(1)!.clientWidth >= children.item(0)!.scrollWidth+children.item(1)!.scrollWidth;
+    const children: HTMLCollection = this.elementRef.nativeElement.children;
+    this.matTooltip.disabled = children.item(0)!.clientWidth + children.item(1)!.clientWidth >= children.item(0)!.scrollWidth + children.item(1)!.scrollWidth;
   }
 }

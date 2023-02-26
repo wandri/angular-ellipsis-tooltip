@@ -3,7 +3,7 @@ import {ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, SimpleChan
 @Component({
   selector: 'ngx-ellipsis-tooltip',
   template: `
-    <div [matTooltip]="content" [content]="content" ngxEllipsisTooltip>
+    <div [matTooltip]="text" [content]="text" ngxEllipsisTooltip>
       <span class="part-ellipsis">{{contentLeft}}</span>
       <span class="part-without-ellipsis">{{contentRight}}</span>
     </div>`,
@@ -11,37 +11,35 @@ import {ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, SimpleChan
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NgxEllipsisTooltipComponent implements OnInit, OnChanges {
-  @Input() content = '';
+  @Input() text = '';
+  @Input() smartCut = true;
 
   contentLeft: string = '';
   contentRight: string = '';
 
   ngOnInit(): void {
-    this.updateContent(this.content);
+    this.updateText(this.text);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     const change = changes.content;
     if (change.currentValue !== change.previousValue) {
       const newValue = change.currentValue;
-      this.updateContent(newValue);
+      this.updateText(newValue);
     }
   }
 
-  private updateContent(value: any) {
-    if (value.length > 0) {
+  private updateText(value: any): void {
+    if (value.length > 0 && this.smartCut) {
       const indexes = [...value.matchAll(/[_ ,.\{\[\(]+/g)]
       if (indexes.length > 0) {
         const lastIndex = Math.max(indexes[indexes.length - 1].index, value.length - 6);
         this.contentLeft = value.substring(0, lastIndex);
         this.contentRight = value.substring(lastIndex, value.length);
-      } else {
-        this.contentLeft = '';
-        this.contentRight = value;
+        return;
       }
-    } else {
-      this.contentLeft = '';
-      this.contentRight = value;
     }
+    this.contentLeft = '';
+    this.contentRight = value;
   }
 }
