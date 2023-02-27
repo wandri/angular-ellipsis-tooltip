@@ -38,7 +38,11 @@ export class AppComponent implements AfterViewInit {
   }
 
   changeWidth(event: number) {
-    this.width = event;
+    if (event < 60) {
+      this.width = 60;
+    } else {
+      this.width = event;
+    }
     this.displayEllipsis = true;
   }
 
