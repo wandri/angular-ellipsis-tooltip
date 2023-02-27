@@ -11,9 +11,11 @@
   <input (valueChange)="changeWidth($event)" [value]="width" matSliderThumb>
 </mat-slider>
 <div class="ellipsis-static-container">
+  <div>With smart cut:</div>
   <div *ngIf="displayEllipsis" [style.width.px]="width" class="ellipsis-dynamic-container">
     <ngx-ellipsis-tooltip [style.width.px]="width" [text]="text"></ngx-ellipsis-tooltip>
   </div>
+  <div>Without smart cut:</div>
   <div *ngIf="displayEllipsis" [style.width.px]="width" class="ellipsis-dynamic-container">
     <ngx-ellipsis-tooltip [smartCut]="false" [style.width.px]="width" [text]="text"></ngx-ellipsis-tooltip>
   </div>
