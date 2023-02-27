@@ -20,6 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "baseHref": "/angular-ellipsis-tooltip/",
             "outputPath": "dist/ellipsis-tooltip",
             "index": "src/index.html",
             "main": "src/main.ts",

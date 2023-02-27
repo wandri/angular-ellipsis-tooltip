@@ -6,9 +6,12 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-lib": "ng build ngx-ellipsis-tooltip",
     "start-lib": "ng build ngx-ellipsis-tooltip --watch",
     "test": "ng test",
     "test-lib": "ng test ngx-ellipsis-tooltip",
+    "test:prod": "ng test --browsers=ChromeHeadless --watch=false --code-coverage",
+    "test-lib:prod": "ng test ngx-ellipsis-tooltip --browsers=ChromeHeadless --watch=false --code-coverage",
     "lint": "ng lint"
   },
   "private": true,

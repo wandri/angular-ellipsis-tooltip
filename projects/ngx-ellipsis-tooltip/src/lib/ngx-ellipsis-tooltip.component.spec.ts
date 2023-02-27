@@ -28,7 +28,7 @@ describe('NgxEllipsisTooltipComponent', () => {
   });
 
   it('should display name with ellipsis', () => {
-    component.ngOnChanges({content: new SimpleChange('', "Long name that should be reduced after some time but let's wait", false)})
+    component.ngOnChanges({text: new SimpleChange('', "Long name that should be reduced after some time but let's wait", false)})
     fixture.detectChanges();
     expect(component.contentLeft).toEqual("Long name that should be reduced after some time but let's");
     expect(component.contentRight).toEqual(" wait");

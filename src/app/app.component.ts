@@ -3,7 +3,7 @@ import {AfterViewInit, Component} from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements AfterViewInit {
   text = '';
@@ -13,8 +13,10 @@ export class AppComponent implements AfterViewInit {
   autoText: number = 0;
 
   ngAfterViewInit() {
-    const example = 'this is a long story about ellipsis, angular and material tooltip';
-    let index = 'this is a long story'.length - 1;
+    const example = 'This is a long story about ellipsis, angular and material tooltip';
+    let firstText = 'This is a long story';
+    let index = firstText.length - 1;
+    this.text = firstText;
     let direction = 1;
     this.autoText = setInterval(() => {
       if (direction == 1 && index != example.length - 1) {
@@ -44,5 +46,8 @@ export class AppComponent implements AfterViewInit {
     if (this.autoText) {
       clearInterval(this.autoText);
     }
+  }
+
+  changeText($event: Event) {
   }
 }

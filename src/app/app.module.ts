@@ -7,6 +7,7 @@ import {FormsModule} from '@angular/forms';
 import {NgxEllipsisTooltipModule} from 'ngx-ellipsis-tooltip';
 import {MatSliderModule} from "@angular/material/slider";
 import {MatTooltipModule} from "@angular/material/tooltip";
+import {RouterModule} from "@angular/router";
 
 
 @NgModule({
@@ -16,6 +17,9 @@ import {MatTooltipModule} from "@angular/material/tooltip";
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    RouterModule.forRoot([
+      {path: '', component: AppComponent},
+    ]),
     NgxEllipsisTooltipModule,
     FormsModule,
     MatSliderModule,
