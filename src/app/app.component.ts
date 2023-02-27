@@ -48,6 +48,4 @@ export class AppComponent implements AfterViewInit {
     }
   }
 
-  changeText($event: Event) {
-  }
 }
