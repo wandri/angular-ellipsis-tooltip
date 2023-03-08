@@ -8,7 +8,8 @@ import {MatTooltip} from "@angular/material/tooltip";
     '[style.height]': '"100%"',
     '[style.white-space]': '"nowrap"',
     '[style.display]': '"flex"'
-  }
+  },
+  standalone: true,
 })
 export class NgxEllipsisTooltipDirective implements AfterViewInit, OnChanges {
   @Input() content = '';
