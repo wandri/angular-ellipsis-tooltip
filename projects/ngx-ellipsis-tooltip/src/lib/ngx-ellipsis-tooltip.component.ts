@@ -1,4 +1,7 @@
 import {ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {MatTooltipModule} from "@angular/material/tooltip";
+import {CommonModule} from "@angular/common";
+import {NgxEllipsisTooltipDirective} from "./ngx-ellipsis-tooltip.directive";
 
 @Component({
   selector: 'ngx-ellipsis-tooltip',
@@ -8,6 +11,8 @@ import {ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, SimpleChan
       <span class="part-without-ellipsis">{{contentRight}}</span>
     </div>`,
   styleUrls: ['./ngx-ellipsis-tooltip.component.scss'],
+  standalone: true,
+  imports: [CommonModule, MatTooltipModule, NgxEllipsisTooltipDirective],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NgxEllipsisTooltipComponent implements OnInit, OnChanges {
