@@ -1,7 +1,6 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {NgxEllipsisTooltipComponent} from './ngx-ellipsis-tooltip.component';
-import {NgxEllipsisTooltipDirective} from "./ngx-ellipsis-tooltip.directive";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {SimpleChange} from "@angular/core";
 
@@ -11,7 +10,7 @@ describe('NgxEllipsisTooltipComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NgxEllipsisTooltipComponent, NgxEllipsisTooltipDirective],
+      declarations: [],
       imports: [MatTooltipModule]
     })
       .compileComponents();
