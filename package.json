@@ -1,6 +1,6 @@
 {
   "name": "ellipsis-tooltip",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "author": "Wandrille Guesdon",
   "scripts": {
     "ng": "ng",
@@ -16,25 +16,25 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^17.0.6",
-    "@angular/cdk": "^17.0.2",
-    "@angular/common": "^17.0.6",
-    "@angular/compiler": "^17.0.6",
-    "@angular/core": "^17.0.6",
-    "@angular/forms": "^17.0.6",
-    "@angular/material": "^17.0.2",
-    "@angular/platform-browser": "^17.0.6",
-    "@angular/platform-browser-dynamic": "^17.0.6",
-    "@angular/router": "^17.0.6",
-    "ng-packagr": "^17.0.2",
+    "@angular/animations": "^16.0.0-next.1",
+    "@angular/cdk": "^16.0.0-next.0",
+    "@angular/common": "^16.0.0-next.1",
+    "@angular/compiler": "^16.0.0-next.1",
+    "@angular/core": "^16.0.0-next.1",
+    "@angular/forms": "^16.0.0-next.1",
+    "@angular/material": "^16.0.0-next.0",
+    "@angular/platform-browser": "^16.0.0-next.1",
+    "@angular/platform-browser-dynamic": "^16.0.0-next.1",
+    "@angular/router": "^16.0.0-next.1",
+    "ng-packagr": "^16.0.0-next.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.5.0",
-    "zone.js": "~0.14.2"
+    "zone.js": "~0.13.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^17.0.6",
-    "@angular/cli": "^17.0.6",
-    "@angular/compiler-cli": "^17.0.6",
+    "@angular-devkit/build-angular": "^16.0.0-next.1",
+    "@angular/cli": "^16.0.0-next.1",
+    "@angular/compiler-cli": "^16.0.0-next.1",
     "@types/jasmine": "~4.3.1",
     "@types/node": "^18.14.6",
     "jasmine-core": "~4.5.0",
@@ -43,6 +43,6 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
-    "typescript": "~5.2.2"
+    "typescript": "~4.9.5"
   }
 }

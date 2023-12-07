@@ -70,18 +70,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "buildTarget": "ellipsis-tooltip:build"
+            "browserTarget": "ellipsis-tooltip:build"
           },
           "configurations": {
             "production": {
-              "buildTarget": "ellipsis-tooltip:build:production"
+              "browserTarget": "ellipsis-tooltip:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "ellipsis-tooltip:build"
+            "browserTarget": "ellipsis-tooltip:build"
           }
         },
         "test": {
